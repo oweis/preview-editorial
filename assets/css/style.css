@@ -155,18 +155,20 @@ strong,b{font-weight:500}
 .moon{position:absolute;top:50%;left:50%;width:0;height:0}
 .moon__chip{
   position:absolute;left:0;top:0;transform:translate(-50%,-50%);
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
   background:var(--card);color:var(--ink);border:1px solid var(--hair);
-  border-radius:var(--pill-r);padding:3px 10px;font-size:12px;font-weight:500;letter-spacing:.02em;
-  white-space:nowrap;box-shadow:var(--drop);
+  border-radius:var(--pill-r);box-shadow:var(--drop);
   animation:orbit-counter var(--dur) linear infinite;
 }
+.moon__chip svg{width:22px;height:22px}
 .ring--rev .moon__chip{animation-name:orbit-counter-rev}
 @keyframes orbit-counter{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
 @keyframes orbit-counter-rev{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 .orbit.is-paused .ring,.orbit.is-paused .moon__chip{animation-play-state:paused}
 .orbit__caption{margin-top:4px;text-align:center;font-size:13px;color:var(--mute)}
 @media (max-width:640px){
-  .moon__chip{font-size:10px;padding:2px 7px}
+  .moon__chip{width:34px;height:34px}
+  .moon__chip svg{width:17px;height:17px}
   .orbit__sun{width:48px;height:48px}
   .orbit__sun svg{width:28px;height:28px}
 }
